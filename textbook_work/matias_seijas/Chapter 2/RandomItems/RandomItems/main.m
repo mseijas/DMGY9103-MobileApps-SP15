@@ -50,7 +50,9 @@ int main(int argc, const char * argv[]) {
                                  [item serialNumber],
                                  [item valueInDollars]); */
         
-        NSLog(@"%@ %@ %@ %d", item.itemName, item.dateCreated, item.serialNumber, item.valueInDollars);
+        // NSLog(@"%@ %@ %@ %d", item.itemName, item.dateCreated, item.serialNumber, item.valueInDollars);
+        
+        NSLog(@"%@", item);
         
         // Destroy the mutable array object
         items = nil;
