@@ -32,6 +32,14 @@ int main(int argc, const char * argv[]) {
         
         BNRItem *item = [[BNRItem alloc] init];
         
+        // This creates an NSString, "Red Sofa" and gives it to the BNRItem
+        [item setItemName:@"Red Sofa"];
+        
+        // This creates an NSString, "A1B2C" and gives it to the BNRItem
+        [item setSerialNumber:@"A1B2C"];
+        
+        // This sends the value 100 to be used as the valueInDollars of this BNRItem
+        [item setValueInDollars:100];
         
         
         NSLog(@"%@ %@ %@ %d", [item itemName],
