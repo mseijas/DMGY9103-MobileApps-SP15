@@ -23,8 +23,8 @@
     NSInteger nounIndex = arc4random() % [randomNounList count];
     
     NSString *randomName = [NSString stringWithFormat:@"%@ %@",
-                            [randomAdjectiveList objectAtIndex:adjectiveIndex],
-                            [randomNounList objectAtIndex:nounIndex]];
+                            randomAdjectiveList[adjectiveIndex],
+                            randomNounList[nounIndex]];
     
     int randomValue = arc4random() % 100;
     
