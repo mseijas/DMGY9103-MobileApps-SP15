@@ -1,4 +1,4 @@
-//
+//;
 //  main.m
 //  RandomItems
 //
@@ -29,6 +29,10 @@ int main(int argc, const char * argv[]) {
             // Log the description of item
             NSLog(@"%@", item);
         }
+        
+        
+     
+        
         
         BNRItem *item = [[BNRItem alloc] init];
         
