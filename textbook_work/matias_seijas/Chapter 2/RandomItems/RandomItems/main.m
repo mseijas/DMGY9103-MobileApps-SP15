@@ -31,7 +31,9 @@ int main(int argc, const char * argv[]) {
         }
         
         
-     
+        BNRItem *item2 = [[BNRItem alloc] initWithItemName:@"Matias" valueInDollars:100 serialNumber:@"ASDFK"];
+        
+        NSLog(@"%@", item2);
         
         
         BNRItem *item = [[BNRItem alloc] init];
