@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// ** Instance variables **
 @interface BNRItem : NSObject
 {
     NSString *_itemName;
@@ -16,8 +17,11 @@
     NSDate *_dateCreated;
 }
 
+// ** Class Methods **
 + (instancetype)randomItem;
 
+
+// ** Instance Methods **
 // Designated initializer for BNRItem
 - (instancetype)initWithItemName:(NSString *)name
                   valueInDollars:(int)value
