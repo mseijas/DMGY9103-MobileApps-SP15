@@ -26,7 +26,9 @@ int main(int argc, const char * argv[]) {
         //for (BNRItem *item in items) {
         //    NSLog(@"%@", item);
         //}
-        NSLog(@"%@", items[11]);
+        
+        BNRItem *itemTwo = [[BNRItem alloc] initWithItemName:@"Matias" serialNumber:@"ZZYYXX2"];
+        NSLog(@"%@", itemTwo);
         
         
 //        BNRItem *item = [[BNRItem alloc] initWithItemName:@"Red Sofa"
