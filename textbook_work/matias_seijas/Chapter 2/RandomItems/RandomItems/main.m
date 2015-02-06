@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRItem.h"
+#import "BNRContainer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -15,20 +16,26 @@ int main(int argc, const char * argv[]) {
         // Create a mutable array object, store its address in items variable
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
+        BNRContainer *myContainer = [[BNRContainer alloc] initWithItemName:@"MyTest"];
+        
+        
         for (int i = 0; i < 10; i++) {
             BNRItem *item = [BNRItem randomItem];
             
             [items addObject:item];
+            [myContainer addToContainer:item];
             
         }
         
+        
+        NSLog(@"This be my container: %@", myContainer);
         
         //for (BNRItem *item in items) {
         //    NSLog(@"%@", item);
         //}
         
-        BNRItem *itemTwo = [[BNRItem alloc] initWithItemName:@"Matias" serialNumber:@"ZZYYXX2"];
-        NSLog(@"%@", itemTwo);
+        //BNRItem *itemTwo = [[BNRItem alloc] initWithItemName:@"Matias" serialNumber:@"ZZYYXX2"];
+        //NSLog(@"%@", itemTwo);
         
         
 //        BNRItem *item = [[BNRItem alloc] initWithItemName:@"Red Sofa"

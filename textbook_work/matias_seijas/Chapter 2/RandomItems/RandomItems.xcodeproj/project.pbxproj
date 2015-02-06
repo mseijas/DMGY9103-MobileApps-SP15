@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600817A01A8304E000E7B042 /* BNRContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6008179F1A8304E000E7B042 /* BNRContainer.m */; };
 		60707C111A7DA820008EEAA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60707C101A7DA820008EEAA0 /* main.m */; };
 		60707C191A7DAC63008EEAA0 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60707C181A7DAC63008EEAA0 /* BNRItem.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6008179E1A8304E000E7B042 /* BNRContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRContainer.h; sourceTree = "<group>"; };
+		6008179F1A8304E000E7B042 /* BNRContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRContainer.m; sourceTree = "<group>"; };
 		60707C0D1A7DA820008EEAA0 /* RandomItems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomItems; sourceTree = BUILT_PRODUCTS_DIR; };
 		60707C101A7DA820008EEAA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60707C171A7DAC63008EEAA0 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				60707C101A7DA820008EEAA0 /* main.m */,
 				60707C171A7DAC63008EEAA0 /* BNRItem.h */,
 				60707C181A7DAC63008EEAA0 /* BNRItem.m */,
+				6008179E1A8304E000E7B042 /* BNRContainer.h */,
+				6008179F1A8304E000E7B042 /* BNRContainer.m */,
 			);
 			path = RandomItems;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			files = (
 				60707C111A7DA820008EEAA0 /* main.m in Sources */,
 				60707C191A7DAC63008EEAA0 /* BNRItem.m in Sources */,
+				600817A01A8304E000E7B042 /* BNRContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +244,7 @@
 				60707C161A7DA820008EEAA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
