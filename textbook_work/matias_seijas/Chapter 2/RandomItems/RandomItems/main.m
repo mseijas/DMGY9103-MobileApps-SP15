@@ -28,37 +28,9 @@ int main(int argc, const char * argv[]) {
         }
         
         
-        NSLog(@"This be my container: %@", myContainer);
-        
-        //for (BNRItem *item in items) {
-        //    NSLog(@"%@", item);
-        //}
-        
-        //BNRItem *itemTwo = [[BNRItem alloc] initWithItemName:@"Matias" serialNumber:@"ZZYYXX2"];
-        //NSLog(@"%@", itemTwo);
-        
-        
-//        BNRItem *item = [[BNRItem alloc] initWithItemName:@"Red Sofa"
-//                                           valueInDollars:100
-//                                             serialNumber:@"A1B2C"];
-//        
-//        
-//        /* NSLog(@"%@ %@ %@ %d", [item itemName],
-//                                 [item dateCreated],
-//                                 [item serialNumber],
-//                                 [item valueInDollars]); */
-//        
-//        // NSLog(@"%@ %@ %@ %d", item.itemName, item.dateCreated, item.serialNumber, item.valueInDollars);
-//        
-//        NSLog(@"%@", item);
-//        
-//        BNRItem *itemWithname = [[BNRItem alloc] initWithItemName:@"Blue Sofa"];
-//        NSLog(@"%@", itemWithname);
-//        
-//        BNRItem *itemWithNoName = [[BNRItem alloc] init];
-//        NSLog(@"%@", itemWithNoName);
-        
-        // Destroy the mutable array object
+        NSLog(@"%@", myContainer);
+    
+
         items = nil;
         
     }

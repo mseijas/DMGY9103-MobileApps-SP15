@@ -60,22 +60,19 @@
 
 - (NSMutableString *)description
 {
-    NSMutableString *descriptionString =
-    [[NSMutableString alloc] initWithFormat:@"\n * CONTAINER: %@ (%@): Worth $%d, recorded on %@  -  TOTAL VALUE: $%d ***",
-     self.itemName,
-     self.serialNumber,
-     self.valueInDollars,
-     self.dateCreated,
-     self.fullValue];
+    NSMutableString *descriptionString = [[NSMutableString alloc] init];
+                                          
+    [descriptionString appendString:@"** CONTAINER: "];
+    [descriptionString appendString:[super description]];
+    [descriptionString appendFormat:@"  -  TOTAL VALUE: $%d \n", self.fullValue];
+    
     
     
     for (BNRItem *subItem in _subItems) {
         
-        NSString *tempString = [[NSString alloc] initWithFormat:@"\n %@ (%@): \t Worth $%d, recorded on %@",
-                                subItem.itemName,
-                                subItem.serialNumber,
-                                subItem.valueInDollars,
-                                subItem.dateCreated];
+        NSMutableString *tempString = [[NSMutableString alloc] init];
+        [tempString appendString:subItem.description];
+        [tempString appendString:@"\n"];
         
         [descriptionString appendString:tempString];
         
