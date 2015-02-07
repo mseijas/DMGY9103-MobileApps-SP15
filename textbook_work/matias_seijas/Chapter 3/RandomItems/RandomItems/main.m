@@ -13,38 +13,26 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        BNRContainer *myContainer = [[BNRContainer alloc] initWithItemName:@"TEST1" valueInDollars:100 serialNumber:@"B3H8GG"];
         
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        for (int i = 0; i < 3; i++) {
-            BNRItem *item = [BNRItem randomItem];
-            
-            [items addObject:item];
-            [myContainer addToContainer:item];
-            
+        BNRItem *backpack = [[BNRItem alloc] initWithItemName:@"Backpack"];
+        [items addObject:backpack];
+        
+        BNRItem *calculator = [[BNRItem alloc] initWithItemName:@"Calculator"];
+        [items addObject:calculator];
+        
+        backpack.containedItem = calculator;
+        
+        backpack = nil;
+        calculator = nil;
+        
+        for (BNRItem *item in items) {
+            NSLog(@"%@", item);
         }
         
-        
-        
-        BNRContainer *myContainer2 = [[BNRContainer alloc] initWithItemName:@"TEST-SUBCONTEINER" valueInDollars:50 serialNumber:@"H444"];
-        
-        NSMutableArray *items2 = [[NSMutableArray alloc] init];
-        
-        for (int i = 0; i < 2; i++) {
-            BNRItem *item = [BNRItem randomItem];
-            
-            [items2 addObject:item];
-            [myContainer2 addToContainer:item];
-            
-        }
-        
-        [myContainer addToContainer:myContainer2];
-        
-        
-        
-        NSLog(@"%@", myContainer);
     
+        NSLog(@"\n Setting items to nil...");
         items = nil;
         
     }

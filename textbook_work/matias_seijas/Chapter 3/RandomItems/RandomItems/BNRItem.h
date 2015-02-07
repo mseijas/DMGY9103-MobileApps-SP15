@@ -15,6 +15,9 @@
     NSString *_serialNumber;
     int _valueInDollars;
     NSDate *_dateCreated;
+    
+    BNRItem *_containedItem;
+    __weak BNRItem *_container;
 }
 
 // ** Class Methods **
@@ -31,6 +34,12 @@
 
 - (instancetype)initWithItemName:(NSString *)name
                     serialNumber:(NSString *)sNumber;
+
+- (void)setContainedItem:(BNRItem *)item;
+- (BNRItem *)containedItem;
+
+- (void)setContainer:(BNRItem *)item;
+- (BNRItem *)container;
 
 - (void)setItemName:(NSString *)str;
 - (NSString *)itemName;
