@@ -58,15 +58,29 @@
 }
 
 
-- (NSString *)description
+- (NSMutableString *)description
 {
-    NSString *descriptionString =
-    [[NSString alloc] initWithFormat:@"* CONTAINER: %@ (%@): Worth $%d, recorded on %@  -  TOTAL VALUE: $%d",
+    NSMutableString *descriptionString =
+    [[NSMutableString alloc] initWithFormat:@"\n * CONTAINER: %@ (%@): Worth $%d, recorded on %@  -  TOTAL VALUE: $%d ***",
      self.itemName,
      self.serialNumber,
      self.valueInDollars,
      self.dateCreated,
      self.fullValue];
+    
+    
+    for (BNRItem *subItem in _subItems) {
+        
+        NSString *tempString = [[NSString alloc] initWithFormat:@"\n %@ (%@): \t Worth $%d, recorded on %@",
+                                subItem.itemName,
+                                subItem.serialNumber,
+                                subItem.valueInDollars,
+                                subItem.dateCreated];
+        
+        [descriptionString appendString:tempString];
+        
+    }
+    
     
     return descriptionString;
     
