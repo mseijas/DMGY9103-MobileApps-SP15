@@ -48,13 +48,38 @@
     return _fullValue;
 }
 
+- (NSMutableArray *)subItems
+{
+    return _subItems;
+}
+
+
 /** METHODS **/
 
 - (void)addToContainer:(BNRItem *)itemToAdd
 {
-    _fullValue += itemToAdd.valueInDollars;
-    
     [_subItems addObject:itemToAdd];
+    
+    [self updateTotalValue];
+}
+
+
+- (void)updateTotalValue
+{
+    _fullValue = 0;
+    for(BNRContainer *subItems in _subItems) {
+        
+        if ([subItems isKindOfClass:[BNRContainer class]]) {
+            for (BNRContainer *container_subItems in subItems.subItems) {
+                _fullValue += container_subItems.valueInDollars;
+            }
+            _fullValue += subItems.valueInDollars;
+        } else {
+            _fullValue += subItems.valueInDollars;
+        }
+        
+    }
+    _fullValue += self.valueInDollars;
 }
 
 
@@ -78,9 +103,7 @@
         
     }
     
-    
     return descriptionString;
-    
 }
 
 

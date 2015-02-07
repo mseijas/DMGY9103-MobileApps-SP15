@@ -29,5 +29,6 @@
 
 
 - (int)fullValue;
+- (NSMutableArray *)subItems;
 
 @end

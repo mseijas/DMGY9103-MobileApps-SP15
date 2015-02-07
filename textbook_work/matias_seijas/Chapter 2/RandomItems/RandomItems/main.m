@@ -13,19 +13,34 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        // Create a mutable array object, store its address in items variable
+        BNRContainer *myContainer = [[BNRContainer alloc] initWithItemName:@"TEST1" valueInDollars:100 serialNumber:@"B3H8GG"];
+        
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        BNRContainer *myContainer = [[BNRContainer alloc] initWithItemName:@"MyTest"];
-        
-        
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             BNRItem *item = [BNRItem randomItem];
             
             [items addObject:item];
             [myContainer addToContainer:item];
             
         }
+        
+        
+        
+        BNRContainer *myContainer2 = [[BNRContainer alloc] initWithItemName:@"TEST-SUBCONTEINER" valueInDollars:50 serialNumber:@"H444"];
+        
+        NSMutableArray *items2 = [[NSMutableArray alloc] init];
+        
+        for (int i = 0; i < 2; i++) {
+            BNRItem *item = [BNRItem randomItem];
+            
+            [items2 addObject:item];
+            [myContainer2 addToContainer:item];
+            
+        }
+        
+        [myContainer addToContainer:myContainer2];
+        
         
         
         NSLog(@"%@", myContainer);
