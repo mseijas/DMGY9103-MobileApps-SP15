@@ -12,6 +12,7 @@
 
  
 - (void)drawRect:(CGRect)rect {
+    
     CGRect bounds = self.bounds;
     
     // Figure out the center of the bounds rectangle
@@ -46,6 +47,8 @@
     // Draw the line!
     [path stroke];
     
+    UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
+    [logoImage drawInRect:CGRectMake(bounds.size.width / 4, bounds.size.height / 4, bounds.size.width / 2, bounds.size.height / 2)];
 }
 
 - (instancetype) initWithFrame:(CGRect)frame
