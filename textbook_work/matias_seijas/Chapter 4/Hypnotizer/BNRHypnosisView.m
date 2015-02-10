@@ -47,8 +47,17 @@
     // Draw the line!
     [path stroke];
     
+    
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(currentContext);
+    CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+    
     UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
     [logoImage drawInRect:CGRectMake(bounds.size.width / 4, bounds.size.height / 4, bounds.size.width / 2, bounds.size.height / 2)];
+    
+    CGContextRestoreGState(currentContext);
+    
+    
 }
 
 - (instancetype) initWithFrame:(CGRect)frame
