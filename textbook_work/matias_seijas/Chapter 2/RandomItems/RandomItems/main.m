@@ -8,50 +8,43 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRItem.h"
+#import "BNRContainer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        // Create a mutable array object, store its address in items variable
+        BNRContainer *myContainer = [[BNRContainer alloc] initWithItemName:@"TEST1" valueInDollars:100 serialNumber:@"B3H8GG"];
+        
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             BNRItem *item = [BNRItem randomItem];
             
             [items addObject:item];
+            [myContainer addToContainer:item];
             
         }
         
         
-        //for (BNRItem *item in items) {
-        //    NSLog(@"%@", item);
-        //}
         
-        BNRItem *itemTwo = [[BNRItem alloc] initWithItemName:@"Matias" serialNumber:@"ZZYYXX2"];
-        NSLog(@"%@", itemTwo);
+        BNRContainer *myContainer2 = [[BNRContainer alloc] initWithItemName:@"TEST-SUBCONTEINER" valueInDollars:50 serialNumber:@"H444"];
+        
+        NSMutableArray *items2 = [[NSMutableArray alloc] init];
+        
+        for (int i = 0; i < 2; i++) {
+            BNRItem *item = [BNRItem randomItem];
+            
+            [items2 addObject:item];
+            [myContainer2 addToContainer:item];
+            
+        }
+        
+        [myContainer addToContainer:myContainer2];
         
         
-//        BNRItem *item = [[BNRItem alloc] initWithItemName:@"Red Sofa"
-//                                           valueInDollars:100
-//                                             serialNumber:@"A1B2C"];
-//        
-//        
-//        /* NSLog(@"%@ %@ %@ %d", [item itemName],
-//                                 [item dateCreated],
-//                                 [item serialNumber],
-//                                 [item valueInDollars]); */
-//        
-//        // NSLog(@"%@ %@ %@ %d", item.itemName, item.dateCreated, item.serialNumber, item.valueInDollars);
-//        
-//        NSLog(@"%@", item);
-//        
-//        BNRItem *itemWithname = [[BNRItem alloc] initWithItemName:@"Blue Sofa"];
-//        NSLog(@"%@", itemWithname);
-//        
-//        BNRItem *itemWithNoName = [[BNRItem alloc] init];
-//        NSLog(@"%@", itemWithNoName);
         
-        // Destroy the mutable array object
+        NSLog(@"%@", myContainer);
+    
         items = nil;
         
     }

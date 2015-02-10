@@ -55,6 +55,7 @@
         _itemName = name;
         _serialNumber = sNumber;
         _valueInDollars = value;
+        
         //[self setItemName:name];
         //[self setValueInDollars:value];
         //[self setSerialNumber:sNumber];
