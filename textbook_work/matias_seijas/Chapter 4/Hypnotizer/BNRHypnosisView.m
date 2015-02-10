@@ -47,13 +47,39 @@
     // Draw the line!
     [path stroke];
     
-    
+    // Shadow Rendering for Logo
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    
+    
     CGContextSaveGState(currentContext);
+    
     CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+    
     
     UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
     [logoImage drawInRect:CGRectMake(bounds.size.width / 4, bounds.size.height / 4, bounds.size.width / 2, bounds.size.height / 2)];
+    
+    CGContextRestoreGState(currentContext);
+    
+    CGContextSaveGState(currentContext);
+    [path addClip];
+    
+    
+    // Grandient Rendering
+    CGFloat locations[2] = { 0.0, 1.0 };
+    CGFloat components[8] = { 1.0, 0.0, 0.0, 1.0,
+        1.0, 1.0, 0.0, 1.0 };
+    
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGGradientRef gradient = CGGradientCreateWithColorComponents(colorspace, components, locations, 2);
+    
+    CGPoint startPoint = { 100, 180 };
+    CGPoint endPoint = { 50, 100 };
+    
+    CGContextDrawLinearGradient(currentContext, gradient, startPoint, endPoint, 0);
+    
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorspace);
     
     CGContextRestoreGState(currentContext);
     
