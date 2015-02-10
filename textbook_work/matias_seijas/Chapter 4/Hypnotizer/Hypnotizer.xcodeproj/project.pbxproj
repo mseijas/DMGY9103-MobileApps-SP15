@@ -13,7 +13,11 @@
 		6063A10F1A86D3C500B22A35 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6063A10D1A86D3C500B22A35 /* LaunchScreen.xib */; };
 		6063A11B1A86D3C500B22A35 /* HypnotizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6063A11A1A86D3C500B22A35 /* HypnotizerTests.m */; };
 		6063A1261A86D53800B22A35 /* BNRHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6063A1251A86D53800B22A35 /* BNRHypnosisView.m */; };
+<<<<<<< HEAD
 		60D672AD1A8AA7EE0028D9BB /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D672AC1A8AA7EE0028D9BB /* logo.png */; };
+=======
+		6063A1281A86E48D00B22A35 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6063A1271A86E48D00B22A35 /* logo.png */; };
+>>>>>>> be82bde6b2b8d79865dc26f60726bb4f5040272f
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,11 @@
 		6063A11A1A86D3C500B22A35 /* HypnotizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnotizerTests.m; sourceTree = "<group>"; };
 		6063A1241A86D53800B22A35 /* BNRHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisView.h; sourceTree = "<group>"; };
 		6063A1251A86D53800B22A35 /* BNRHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisView.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		60D672AC1A8AA7EE0028D9BB /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+=======
+		6063A1271A86E48D00B22A35 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = "../../../../../../Downloads/Solutions/00-Resources/logo.png"; sourceTree = "<group>"; };
+>>>>>>> be82bde6b2b8d79865dc26f60726bb4f5040272f
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +76,11 @@
 				6063A1031A86D3C500B22A35 /* Hypnotizer */,
 				6063A1171A86D3C500B22A35 /* HypnotizerTests */,
 				6063A1021A86D3C500B22A35 /* Products */,
+<<<<<<< HEAD
 				60D672AC1A8AA7EE0028D9BB /* logo.png */,
+=======
+				6063A1271A86E48D00B22A35 /* logo.png */,
+>>>>>>> be82bde6b2b8d79865dc26f60726bb4f5040272f
 			);
 			sourceTree = "<group>";
 		};
@@ -199,9 +211,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				60D672AD1A8AA7EE0028D9BB /* logo.png in Resources */,
 				6063A10F1A86D3C500B22A35 /* LaunchScreen.xib in Resources */,
 				6063A10C1A86D3C500B22A35 /* Images.xcassets in Resources */,
+=======
+				6063A10F1A86D3C500B22A35 /* LaunchScreen.xib in Resources */,
+				6063A10C1A86D3C500B22A35 /* Images.xcassets in Resources */,
+				6063A1281A86E48D00B22A35 /* logo.png in Resources */,
+>>>>>>> be82bde6b2b8d79865dc26f60726bb4f5040272f
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +422,10 @@
 				6063A1201A86D3C500B22A35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+<<<<<<< HEAD
 			defaultConfigurationName = Release;
+=======
+>>>>>>> be82bde6b2b8d79865dc26f60726bb4f5040272f
 		};
 		6063A1211A86D3C500B22A35 /* Build configuration list for PBXNativeTarget "HypnotizerTests" */ = {
 			isa = XCConfigurationList;
@@ -413,7 +434,10 @@
 				6063A1231A86D3C500B22A35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+<<<<<<< HEAD
 			defaultConfigurationName = Release;
+=======
+>>>>>>> be82bde6b2b8d79865dc26f60726bb4f5040272f
 		};
 /* End XCConfigurationList section */
 	};
