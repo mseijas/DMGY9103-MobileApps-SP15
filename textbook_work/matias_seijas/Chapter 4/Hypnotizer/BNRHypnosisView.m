@@ -48,13 +48,21 @@
     [path stroke];
     
     
+    CGPoint clip1;
+    clip1.x = 100;
+    clip1.y = 100;
+    
+    CGPoint clip2;
+    clip2.x = 200;
+    clip2.y = 200;
+    
     
     UIBezierPath *clippingMask = [[UIBezierPath alloc] init];
-    [clippingMask addLineToPoint:CGPointMake(100, 100)];
-    [clippingMask addLineToPoint:CGPointMake(200, 200)];
+    [clippingMask addLineToPoint:clip1];
+    [clippingMask addLineToPoint:clip2];
     clippingMask.lineWidth = 5;
     [[UIColor blueColor] setStroke];
-    [clippingMask stroke];
+    [clippingMask fill];
     
     // Shadow Rendering for Logo
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
