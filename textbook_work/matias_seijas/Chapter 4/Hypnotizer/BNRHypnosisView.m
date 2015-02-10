@@ -47,6 +47,15 @@
     // Draw the line!
     [path stroke];
     
+    
+    
+    UIBezierPath *clippingMask = [[UIBezierPath alloc] init];
+    [clippingMask addLineToPoint:CGPointMake(100, 100)];
+    [clippingMask addLineToPoint:CGPointMake(200, 200)];
+    clippingMask.lineWidth = 5;
+    [[UIColor blueColor] setStroke];
+    [clippingMask stroke];
+    
     // Shadow Rendering for Logo
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
     
@@ -61,8 +70,11 @@
     
     CGContextRestoreGState(currentContext);
     
-    CGContextSaveGState(currentContext);
-    [path addClip];
+    
+    
+    
+    currentContext = UIGraphicsGetCurrentContext();
+    
     
     
     // Grandient Rendering
@@ -75,6 +87,10 @@
     
     CGPoint startPoint = { 100, 180 };
     CGPoint endPoint = { 50, 100 };
+    
+    
+    CGContextSaveGState(currentContext);
+    [path addClip];
     
     CGContextDrawLinearGradient(currentContext, gradient, startPoint, endPoint, 0);
     
