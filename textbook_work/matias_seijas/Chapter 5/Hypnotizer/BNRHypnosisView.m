@@ -146,4 +146,10 @@
     self.circleColor = randomColor;
 }
 
+- (void)setCircleColor:(UIColor *)circleColor
+{
+    _circleColor = circleColor;
+    [self setNeedsDisplay];
+}
+
 @end
