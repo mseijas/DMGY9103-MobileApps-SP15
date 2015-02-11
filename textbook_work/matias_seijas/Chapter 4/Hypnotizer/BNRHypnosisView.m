@@ -15,6 +15,8 @@
     
     CGRect bounds = self.bounds;
     
+    NSLog(@"Bounds origin width: %f  -  Bounds origin height: %f", bounds.size.width, bounds.size.height);
+    
     // Figure out the center of the bounds rectangle
     CGPoint center;
     center.x = bounds.origin.x + bounds.size.width / 2.0;
@@ -48,64 +50,68 @@
     [path stroke];
     
     
-    CGPoint clip1;
-    clip1.x = 100;
-    clip1.y = 100;
     
-    CGPoint clip2;
-    clip2.x = 200;
-    clip2.y = 200;
     
+    // Draw the triangle
+    
+    CGPoint triangleVertex1 = CGPointMake(160, 106);
+    CGPoint triangleVertex2 = CGPointMake(63, 394);
+    CGPoint triangleVertex3 = CGPointMake(255, 394);
     
     UIBezierPath *clippingMask = [[UIBezierPath alloc] init];
-    [clippingMask addLineToPoint:clip1];
-    [clippingMask addLineToPoint:clip2];
-    clippingMask.lineWidth = 5;
-    [[UIColor blueColor] setStroke];
+    
+    [clippingMask moveToPoint:triangleVertex1];
+    [clippingMask addLineToPoint:triangleVertex2];
+    [clippingMask addLineToPoint:triangleVertex3];
+    [clippingMask closePath];
+    
     [clippingMask fill];
     
-    // Shadow Rendering for Logo
+    
+    
+    // Core Graphics
+    
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    
+    
+    // Grandient Rendering
+    
+    CGFloat locations[2] = { 0.0, 1.0 };
+    CGFloat components[8] = { 0.18, 0.8, 0.44, 1.0,
+                              1.0, 1.0, 0.0, 1.0 };
+    
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGGradientRef gradient = CGGradientCreateWithColorComponents(colorspace, components, locations, 2);
+    
+    CGPoint startPoint = { 0, 0 };
+    CGPoint endPoint = { 0, 480 };
     
     
     CGContextSaveGState(currentContext);
     
-    CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+        [clippingMask addClip];
     
+        CGContextDrawLinearGradient(currentContext, gradient, startPoint, endPoint, 0);
+    
+    CGContextRestoreGState(currentContext);
+    
+    
+    CGGradientRelease(gradient);
+    CGColorSpaceRelease(colorspace);
+  
+    
+    
+    // Logo + Shadow Rendering
+    
+    CGContextSaveGState(currentContext);
+    
+    CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
     
     UIImage *logoImage = [UIImage imageNamed:@"logo.png"];
     [logoImage drawInRect:CGRectMake(bounds.size.width / 4, bounds.size.height / 4, bounds.size.width / 2, bounds.size.height / 2)];
     
     CGContextRestoreGState(currentContext);
     
-    
-    
-    
-    currentContext = UIGraphicsGetCurrentContext();
-    
-    
-    
-    // Grandient Rendering
-    CGFloat locations[2] = { 0.0, 1.0 };
-    CGFloat components[8] = { 1.0, 0.0, 0.0, 1.0,
-        1.0, 1.0, 0.0, 1.0 };
-    
-    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
-    CGGradientRef gradient = CGGradientCreateWithColorComponents(colorspace, components, locations, 2);
-    
-    CGPoint startPoint = { 100, 180 };
-    CGPoint endPoint = { 50, 100 };
-    
-    
-    CGContextSaveGState(currentContext);
-    [path addClip];
-    
-    CGContextDrawLinearGradient(currentContext, gradient, startPoint, endPoint, 0);
-    
-    CGGradientRelease(gradient);
-    CGColorSpaceRelease(colorspace);
-    
-    CGContextRestoreGState(currentContext);
     
 }
 
