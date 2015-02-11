@@ -14,8 +14,7 @@
 - (void)drawRect:(CGRect)rect {
     
     CGRect bounds = self.bounds;
-    
-    NSLog(@"Bounds origin width: %f  -  Bounds origin height: %f", bounds.size.width, bounds.size.height);
+
     
     // Figure out the center of the bounds rectangle
     CGPoint center;
