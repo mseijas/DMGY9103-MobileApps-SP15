@@ -30,7 +30,7 @@
     CGRect screenRect = self.window.bounds;
     CGRect bigRect = screenRect;
     bigRect.size.width *= 2.0;
-    //bigRect.size.height *= 2.0;
+    // bigRect.size.height *= 2.0;
     
     // Create a screen-sized scroll view and add it to the window
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
