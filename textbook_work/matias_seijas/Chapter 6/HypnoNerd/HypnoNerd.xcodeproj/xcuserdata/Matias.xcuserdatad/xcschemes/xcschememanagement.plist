@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Hypnotizer.xcscheme</key>
+		<key>HypnoNerd.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6063A1001A86D3C500B22A35</key>
+		<key>60E025521A8FF4520076C1F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6063A1131A86D3C500B22A35</key>
+		<key>60E025651A8FF4520076C1F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

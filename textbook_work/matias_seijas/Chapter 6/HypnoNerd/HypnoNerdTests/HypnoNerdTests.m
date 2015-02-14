@@ -1,19 +1,19 @@
 //
-//  HypnotizerTests.m
-//  HypnotizerTests
+//  HypnoNerdTests.m
+//  HypnoNerdTests
 //
-//  Created by Matias Seijas on 2/7/15.
+//  Created by Matias Seijas on 2/14/15.
 //  Copyright (c) 2015 Matias Seijas. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface HypnotizerTests : XCTestCase
+@interface HypnoNerdTests : XCTestCase
 
 @end
 
-@implementation HypnotizerTests
+@implementation HypnoNerdTests
 
 - (void)setUp {
     [super setUp];

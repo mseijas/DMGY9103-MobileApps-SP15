@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  Hypnotizer
+//  HypnoNerd
 //
-//  Created by Matias Seijas on 2/7/15.
+//  Created by Matias Seijas on 2/14/15.
 //  Copyright (c) 2015 Matias Seijas. All rights reserved.
 //
 
