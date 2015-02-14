@@ -21,4 +21,20 @@
     self.view = backgroundView;
 }
 
+- (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
+    if (self) {
+        // Set the tab bar item's title
+        self.tabBarItem.title = @"Reminder";
+        
+        // Create a UIImage from a file
+        UIImage *image = [UIImage imageNamed:@"Time.png"];
+        
+        self.tabBarItem.image = image;
+    }
+    
+    return self;
+}
 @end
