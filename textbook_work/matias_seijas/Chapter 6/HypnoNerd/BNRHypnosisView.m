@@ -144,16 +144,20 @@
         case 0:
             // Red
             self.circleColor = [UIColor redColor];
+
             break;
         case 1:
             // Green
             self.circleColor = [UIColor greenColor];
+
             break;
         case 2:
             // Blue
             self.circleColor = [UIColor blueColor];
+
             break;
         default:
+
             break;
     }
 }
