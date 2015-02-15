@@ -119,7 +119,45 @@
     CGContextRestoreGState(currentContext);
     
     
+    // Segmented Control
+    
+    NSArray *segmentedItems = @[@"Red", @"Green", @"Blue"];
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentedItems];
+    segmentedControl.frame = CGRectMake(bounds.size.width / 4, bounds.size.height / 10, bounds.size.width / 2, 20);
+    
+    
+    [segmentedControl addTarget:self
+                         action:@selector(segmentAction:)
+               forControlEvents:UIControlEventValueChanged];
+    
+    
+    
+    [self addSubview:segmentedControl];
+
+    
+    
 }
+
+- (void)segmentAction:(UISegmentedControl *)segment
+{
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            // Red
+            self.circleColor = [UIColor redColor];
+            break;
+        case 1:
+            // Green
+            self.circleColor = [UIColor greenColor];
+            break;
+        case 2:
+            // Blue
+            self.circleColor = [UIColor blueColor];
+            break;
+        default:
+            break;
+    }
+}
+
 
 - (instancetype) initWithFrame:(CGRect)frame
 {
