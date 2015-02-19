@@ -35,10 +35,10 @@
     
     if (self) {
         // Set the tab bar item's title
-        self.tabBarItem.title = @"Reminder";
+        self.tabBarItem.title = @"Hypnosis";
         
         // Create a UIImage from a file
-        UIImage *image = [UIImage imageNamed:@"Time.png"];
+        UIImage *image = [UIImage imageNamed:@"Hypno.png"];
         
         self.tabBarItem.image = image;
     }

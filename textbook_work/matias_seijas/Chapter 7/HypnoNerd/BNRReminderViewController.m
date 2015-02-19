@@ -36,11 +36,11 @@
     
     if (self) {
         // Set the tab bar item's title
-        self.tabBarItem.title = @"Hypnotize";
+        self.tabBarItem.title = @"Reminder";
         
         // Create a UIImage from a file
         // This will use Hypno@2x.png on retina display devices
-        UIImage *image = [UIImage imageNamed:@"Hypno.png"];
+        UIImage *image = [UIImage imageNamed:@"Time.png"];
         
         // Put that image on the tab bar item
         self.tabBarItem.image = image;
