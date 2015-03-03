@@ -31,6 +31,7 @@
     textField.delegate = self;
     
     [backgroundView addSubview:textField];
+
     
     
     // Set it as *the* view of this view controller
@@ -76,6 +77,19 @@
         
         // Add the label to the hierarchy
         [self.view addSubview:messageLabel];
+        
+        UIInterpolatingMotionEffect *motionEffect;
+        motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x"
+                                                                       type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+        motionEffect.minimumRelativeValue = @(-25);
+        motionEffect.maximumRelativeValue = @(25);
+        [messageLabel addMotionEffect:motionEffect];
+        
+        motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y"
+                                                                       type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+        motionEffect.minimumRelativeValue = @(-25);
+        motionEffect.maximumRelativeValue = @(25);
+        [messageLabel addMotionEffect:motionEffect];
     }
 }
 
