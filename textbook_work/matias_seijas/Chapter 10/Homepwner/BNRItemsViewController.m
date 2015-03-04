@@ -27,11 +27,10 @@
     // Call the superclass's designated initializer
     self = [super initWithStyle:UITableViewStylePlain];
     
-//    if (self) {
-//        for (int i = 0; i < 5; i++) {
-//            [[BNRItemStore sharedStore] createItem];
-//        }
-//    }
+    if (self) {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwner";
+    }
     
     return self;
 }
@@ -178,6 +177,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     // Push it to the top of the navigation controller's stack
     [self.navigationController pushViewController:detailViewController
                                          animated:YES];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 
