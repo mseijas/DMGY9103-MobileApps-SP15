@@ -7,8 +7,11 @@
 //
 
 #import "BNRItemsViewController.h"
+
+#import "BNRDetailViewController.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
+
 
 @interface BNRItemsViewController ()
 
@@ -159,6 +162,16 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 {
     [[BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row
                                         toIndex:destinationIndexPath.row];
+}
+
+- (void) tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] init];
+    
+    // Push it to the top of the navigation controller's stack
+    [self.navigationController pushViewController:detailViewController
+                                         animated:YES];
 }
 
 
