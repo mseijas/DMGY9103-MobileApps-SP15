@@ -17,6 +17,7 @@
 		604A05371AA6359500987969 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604A05361AA6359500987969 /* BNRItemsViewController.m */; };
 		604A053D1AA637C800987969 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 604A053C1AA637C800987969 /* BNRItem.m */; };
 		604A05401AA6383D00987969 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 604A053F1AA6383D00987969 /* BNRItemStore.m */; };
+		6083357C1AACF87400A9FB83 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6083357B1AACF87400A9FB83 /* BNRImageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		604A053C1AA637C800987969 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		604A053E1AA6383D00987969 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		604A053F1AA6383D00987969 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		6083357A1AACF87400A9FB83 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		6083357B1AACF87400A9FB83 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			children = (
 				602AC4AB1AA6993900097469 /* BNRDetailViewController.h */,
 				602AC4AC1AA6993900097469 /* BNRDetailViewController.m */,
+				6083357A1AACF87400A9FB83 /* BNRImageStore.h */,
+				6083357B1AACF87400A9FB83 /* BNRImageStore.m */,
 				602AC4AD1AA6993900097469 /* BNRDetailViewController.xib */,
 				604A053B1AA637C800987969 /* BNRItem.h */,
 				604A053C1AA637C800987969 /* BNRItem.m */,
@@ -236,6 +241,7 @@
 			files = (
 				602AC4AE1AA6993900097469 /* BNRDetailViewController.m in Sources */,
 				604A05401AA6383D00987969 /* BNRItemStore.m in Sources */,
+				6083357C1AACF87400A9FB83 /* BNRImageStore.m in Sources */,
 				604A05371AA6359500987969 /* BNRItemsViewController.m in Sources */,
 				604A053D1AA637C800987969 /* BNRItem.m in Sources */,
 				604A051B1AA6348900987969 /* AppDelegate.m in Sources */,
