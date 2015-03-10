@@ -11,7 +11,7 @@
 
 @implementation BNRDrawViewController
 
--(void)loadview
+- (void)loadView
 {
     self.view = [[BNRDrawView alloc] initWithFrame:CGRectZero];
 }
