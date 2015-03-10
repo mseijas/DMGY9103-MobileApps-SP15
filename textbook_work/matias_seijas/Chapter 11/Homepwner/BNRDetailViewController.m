@@ -11,7 +11,7 @@
 #import "BNRImageStore.h"
 
 @interface BNRDetailViewController ()
-    <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+    <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
@@ -110,6 +110,20 @@
     // you must call this dismiss method
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (IBAction)backgroundTapped:(id)sender {
+    
+    [self.view endEditing:YES];
+    
+}
+
 
 
 @end
