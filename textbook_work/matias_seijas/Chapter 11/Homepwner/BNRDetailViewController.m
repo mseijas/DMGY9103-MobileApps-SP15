@@ -8,6 +8,7 @@
 
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
+#import "BNRImageStore.h"
 
 @interface BNRDetailViewController ()
     <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -90,6 +91,9 @@
 {
     // Get picked image from info dictionary
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    // Store the image in the BNRImageStore for this key
+    [[BNRImageStore sharedStore] setImage:image forKey:self.item.itemKey];
     
     // Put that image onto the screen in our image view
     self.imageView.image = image;
