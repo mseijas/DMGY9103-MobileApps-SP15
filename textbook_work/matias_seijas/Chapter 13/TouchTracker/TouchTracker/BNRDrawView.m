@@ -210,7 +210,7 @@
     return YES;
 }
 
-- (void)delete:(id)sender
+- (void)deleteLine:(id)sender
 {
     // Remove the selected line from the list of finishedLines
     [self.finishedLines removeObject:self.selectedLine];
