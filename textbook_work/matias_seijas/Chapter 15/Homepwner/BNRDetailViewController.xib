@@ -87,6 +87,20 @@
                         </barButtonItem>
                     </items>
                 </toolbar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-w1-doJ">
+                    <rect key="frame" x="34" y="324" width="42" height="21"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jim-kM-t4h">
+                    <rect key="frame" x="237" y="324" width="42" height="21"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfb-ZH-rbm">
                     <rect key="frame" x="108" y="102" width="178" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -104,15 +118,21 @@
                 <constraint firstItem="dwz-TO-9LX" firstAttribute="leading" secondItem="6E0-Lg-WTf" secondAttribute="leading" id="AV2-nf-Wms"/>
                 <constraint firstItem="dwz-TO-9LX" firstAttribute="baseline" secondItem="X5H-8c-ePi" secondAttribute="baseline" constant="1" id="Cf9-b0-PQE"/>
                 <constraint firstAttribute="trailing" secondItem="FEn-Kg-UhP" secondAttribute="trailing" constant="34" id="Cve-Fa-wuP"/>
+                <constraint firstItem="mdT-w1-doJ" firstAttribute="top" secondItem="FEn-Kg-UhP" secondAttribute="bottom" constant="38" id="E9B-z8-6mI"/>
                 <constraint firstItem="6E0-Lg-WTf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="105" id="Egj-1Y-eCj"/>
+                <constraint firstItem="mdT-w1-doJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="ExL-vr-UYw"/>
                 <constraint firstItem="gwx-o9-e3q" firstAttribute="leading" secondItem="8cb-jT-apJ" secondAttribute="trailing" constant="38" id="FSH-5m-0pD"/>
                 <constraint firstItem="6E0-Lg-WTf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="28" id="PYL-jI-5Fv"/>
+                <constraint firstItem="Jim-kM-t4h" firstAttribute="top" secondItem="FEn-Kg-UhP" secondAttribute="bottom" constant="38" id="Wdt-g7-CHM"/>
                 <constraint firstItem="VDa-dk-ikF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xf5-hW-s1I"/>
                 <constraint firstItem="FEn-Kg-UhP" firstAttribute="top" secondItem="gwx-o9-e3q" secondAttribute="bottom" constant="26" id="a3D-EC-RHF"/>
+                <constraint firstItem="mdT-w1-doJ" firstAttribute="width" secondItem="Jim-kM-t4h" secondAttribute="width" id="aP7-Bb-q6b"/>
                 <constraint firstAttribute="trailing" secondItem="Cfb-ZH-rbm" secondAttribute="trailing" constant="34" id="aym-CY-oPg"/>
                 <constraint firstItem="Cfb-ZH-rbm" firstAttribute="trailing" secondItem="X5H-8c-ePi" secondAttribute="trailing" id="bkw-88-WfD"/>
                 <constraint firstItem="gwx-o9-e3q" firstAttribute="trailing" secondItem="X5H-8c-ePi" secondAttribute="trailing" id="bwP-wJ-19u"/>
+                <constraint firstItem="Jim-kM-t4h" firstAttribute="leading" secondItem="mdT-w1-doJ" secondAttribute="trailing" constant="161" id="ctF-c6-CRV"/>
                 <constraint firstItem="dwz-TO-9LX" firstAttribute="leading" secondItem="8cb-jT-apJ" secondAttribute="leading" id="ePk-4h-xrX"/>
+                <constraint firstAttribute="trailing" secondItem="Jim-kM-t4h" secondAttribute="trailing" constant="41" id="fXE-8g-9lJ"/>
                 <constraint firstAttribute="bottom" secondItem="VDa-dk-ikF" secondAttribute="bottom" id="fqg-5S-CuT"/>
                 <constraint firstItem="X5H-8c-ePi" firstAttribute="leading" secondItem="dwz-TO-9LX" secondAttribute="trailing" constant="37" id="iEh-RA-gOa"/>
                 <constraint firstItem="gwx-o9-e3q" firstAttribute="baseline" secondItem="8cb-jT-apJ" secondAttribute="baseline" constant="-1" id="oWE-md-JrX"/>
