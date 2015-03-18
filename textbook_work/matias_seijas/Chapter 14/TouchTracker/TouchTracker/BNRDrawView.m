@@ -93,6 +93,7 @@
         [[UIColor greenColor] set];
         [self strokeLine:self.selectedLine];
     }
+
 }
 
 
@@ -124,6 +125,7 @@
         BNRLine *line = self.linesInProgress[key];
         
         line.end = [t locationInView:self];
+        
     }
     
     [self setNeedsDisplay];
@@ -160,6 +162,7 @@
     
     [self.linesInProgress removeAllObjects];
     [self.finishedLines removeAllObjects];
+    
     [self setNeedsDisplay];
 }
 
@@ -286,6 +289,20 @@
         
         [gr setTranslation:CGPointZero inView:self];
     }
+}
+
+
+- (int)numberOfLines
+{
+    int count = 0;
+    
+    // Check that they are non-nil before we add their counts...
+    
+    if (self.linesInProgress && self.finishedLines) {
+        count = [self.linesInProgress count] + [self.finishedLines count];
+    }
+    
+    return count;
 }
 
 
