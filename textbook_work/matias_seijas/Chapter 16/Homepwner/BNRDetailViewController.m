@@ -128,7 +128,10 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"View Loaded");
+    [super viewDidLoad];
+    
+    UIImageView *iv = [[UIImageView alloc] initWithImage:nil];
+    
     
 }
 
