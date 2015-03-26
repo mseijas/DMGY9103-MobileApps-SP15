@@ -144,6 +144,7 @@
     // The image view was pointed to by the imageView property
     self.imageView = iv;
     
+    // 
     
     NSDictionary *nameMap = @{@"imageView" : self.imageView,
                               @"dateLabel" : self.dateLabel,
@@ -159,6 +160,9 @@
                                                                            options:0
                                                                            metrics:nil
                                                                              views:nameMap];
+    
+    [self.view addConstraints:horizontalConstraints];
+    [self.view addConstraints:verticalConstraints];
     
 }
 
