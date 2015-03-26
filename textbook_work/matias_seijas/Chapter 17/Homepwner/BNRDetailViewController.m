@@ -11,8 +11,9 @@
 #import "BNRImageStore.h"
 
 @interface BNRDetailViewController ()
-    <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
+    <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIPopoverControllerDelegate>
 
+@property (strong, nonatomic) UIPopoverController *imagePickerPopover;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -100,7 +101,22 @@
     imagePicker.delegate = self;
     
     // Place image picker on the screen
-    [self presentViewController:imagePicker animated:YES completion:NULL];
+    // [self presentViewController:imagePicker animated:YES completion:NULL];
+    
+    // Check for iPad device before instantiating the popover controller
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        // Create a new popover controller that will display the imagePicker
+        self.imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        
+        self.imagePickerPopover.delegate = self;
+        
+        // Display the popover controller; sender is the camera bar button item
+        [self.imagePickerPopover presentPopoverFromBarButtonItem:sender
+                                        permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                        animated:YES];
+    } else {
+        [self presentViewController:imagePicker animated:YES completion:NULL];
+    }
 }
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
