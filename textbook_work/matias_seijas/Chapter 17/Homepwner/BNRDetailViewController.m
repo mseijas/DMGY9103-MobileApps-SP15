@@ -275,7 +275,7 @@
 - (void)save:(id)sender {
 
     [self.presentingViewController dismissViewControllerAnimated:YES
-                                                      completion:NULL];
+                                                      completion:self.dismissBlock];
     
 }
 
@@ -285,7 +285,7 @@
     [[BNRItemStore sharedStore] removeItem:self.item];
     
     [self.presentingViewController dismissViewControllerAnimated:YES
-                                                      completion:NULL];
+                                                      completion:self.dismissBlock];
     
 }
 
