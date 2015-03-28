@@ -95,13 +95,22 @@
     BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
     
     // Figure out where that item is in the array
-    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
+//    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
+//    
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+//    
+//    // Insert this new row into the table
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath]
+//                          withRowAnimation:UITableViewRowAnimationTop];
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] initForNewItem:YES];
     
-    // Insert this new row into the table
-    [self.tableView insertRowsAtIndexPaths:@[indexPath]
-                          withRowAnimation:UITableViewRowAnimationTop];
+    detailViewController.item = newItem;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    
+    [self presentViewController:navController animated:YES completion:NULL];
+    
 }
 
 
