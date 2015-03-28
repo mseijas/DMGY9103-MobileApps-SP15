@@ -120,6 +120,10 @@
         
         self.imagePickerPopover.delegate = self;
         
+        UIColor *bgColor = [UIColor redColor];
+        
+        self.imagePickerPopover.backgroundColor = bgColor;
+        
         // Display the popover controller; sender is the camera bar button item
         [self.imagePickerPopover presentPopoverFromBarButtonItem:sender
                                         permittedArrowDirections:UIPopoverArrowDirectionAny
