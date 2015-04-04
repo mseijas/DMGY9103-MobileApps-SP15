@@ -74,16 +74,6 @@
     [self.dictionary removeObjectForKey:key];
 }
 
-- (NSString *)itemArchivePath
-{
-    // Make sure that the first argument is NSDocumentDirectory
-    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    
-    // Get the one document directory from that list
-    NSString *documentDirectory = [documentDirectories firstObject];
-    
-    return [documentDirectory stringByAppendingString:@"items.archive"];
-}
 
 
 @end

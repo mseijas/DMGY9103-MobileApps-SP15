@@ -116,8 +116,8 @@
     navController.modalPresentationStyle = UIModalPresentationFormSheet;
     //navController.modalTransitionStyle = UIModalTransitionStylePartialCurl;
     
-    navController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    self.definesPresentationContext = YES;
+    //navController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    //self.definesPresentationContext = YES;
     
     [self presentViewController:navController animated:YES completion:NULL];
     
