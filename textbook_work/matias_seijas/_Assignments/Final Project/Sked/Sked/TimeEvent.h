@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface LogEvent : NSObject
+@interface TimeEvent : NSObject
 
 @property (nonatomic, copy) NSString *eventName;
 @property (nonatomic, copy) NSDate *startTime;

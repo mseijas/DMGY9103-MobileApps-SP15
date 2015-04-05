@@ -8,7 +8,7 @@
 
 #import "LogEvent.h"
 
-@implementation LogEvent
+@implementation TimeEvent
 
 // Designated initializer
 - (instancetype)initWithEventName:(NSString *)name
