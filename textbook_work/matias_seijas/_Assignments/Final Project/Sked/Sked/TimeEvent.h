@@ -1,5 +1,5 @@
 //
-//  LogEvent.h
+//  TimeEvent.h
 //  Sked
 //
 //  Created by Matias Seijas on 4/5/15.
@@ -15,6 +15,5 @@
 @property (nonatomic, copy) NSDate *startTime;
 @property (nonatomic, copy) NSDate *endTime;
 @property (nonatomic, copy) UIColor *eventColor;
-
 
 @end

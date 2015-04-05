@@ -15,7 +15,7 @@
 		60DFDECB1AD0F12C00A4CF6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DFDECA1AD0F12C00A4CF6D /* Images.xcassets */; };
 		60DFDECE1AD0F12C00A4CF6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60DFDECC1AD0F12C00A4CF6D /* LaunchScreen.xib */; };
 		60DFDEDA1AD0F12D00A4CF6D /* SkedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDED91AD0F12D00A4CF6D /* SkedTests.m */; };
-		60DFDEE51AD0F14900A4CF6D /* TimeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDEE41AD0F14900A4CF6D /* TimeEvent.m */; };
+		60FB58621AD19B5D008BC8B1 /* TimeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FB58611AD19B5D008BC8B1 /* TimeEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,8 @@
 		60DFDED31AD0F12D00A4CF6D /* SkedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFDED81AD0F12D00A4CF6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DFDED91AD0F12D00A4CF6D /* SkedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkedTests.m; sourceTree = "<group>"; };
-		60DFDEE31AD0F14900A4CF6D /* TimeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeEvent.h; sourceTree = "<group>"; };
-		60DFDEE41AD0F14900A4CF6D /* TimeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeEvent.m; sourceTree = "<group>"; };
+		60FB58601AD19B5D008BC8B1 /* TimeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeEvent.h; sourceTree = "<group>"; };
+		60FB58611AD19B5D008BC8B1 /* TimeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 				60DFDEBE1AD0F12C00A4CF6D /* AppDelegate.h */,
 				60DFDEBF1AD0F12C00A4CF6D /* AppDelegate.m */,
 				60DFDEC41AD0F12C00A4CF6D /* ViewController.h */,
-				60DFDEE31AD0F14900A4CF6D /* TimeEvent.h */,
-				60DFDEE41AD0F14900A4CF6D /* TimeEvent.m */,
+				60FB58601AD19B5D008BC8B1 /* TimeEvent.h */,
+				60FB58611AD19B5D008BC8B1 /* TimeEvent.m */,
 				60DFDEC51AD0F12C00A4CF6D /* ViewController.m */,
 				60DFDEC71AD0F12C00A4CF6D /* Main.storyboard */,
 				60DFDECA1AD0F12C00A4CF6D /* Images.xcassets */,
@@ -228,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DFDEC01AD0F12C00A4CF6D /* AppDelegate.m in Sources */,
-				60DFDEE51AD0F14900A4CF6D /* TimeEvent.m in Sources */,
+				60FB58621AD19B5D008BC8B1 /* TimeEvent.m in Sources */,
 				60DFDEBD1AD0F12C00A4CF6D /* main.m in Sources */,
 				60DFDEC61AD0F12C00A4CF6D /* ViewController.m in Sources */,
 				60DFDEC31AD0F12C00A4CF6D /* Sked.xcdatamodeld in Sources */,
@@ -422,6 +422,7 @@
 				60DFDEDF1AD0F12D00A4CF6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60DFDEE01AD0F12D00A4CF6D /* Build configuration list for PBXNativeTarget "SkedTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +431,7 @@
 				60DFDEE21AD0F12D00A4CF6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
