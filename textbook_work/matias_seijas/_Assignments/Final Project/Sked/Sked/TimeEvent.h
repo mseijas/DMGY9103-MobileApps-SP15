@@ -16,4 +16,12 @@
 @property (nonatomic, copy) NSDate *endTime;
 @property (nonatomic, copy) UIColor *eventColor;
 
+
+- (instancetype)initWithEventName:(NSString *)name
+                       eventColor:(UIColor *)color;
+
+- (instancetype)initWithEventName:(NSString *)name;
+
+- (long)endTimeEvent;
+
 @end

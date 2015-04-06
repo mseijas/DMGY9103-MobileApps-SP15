@@ -23,6 +23,19 @@
         _startTime = [[NSDate alloc] init];
     }
     
+    
+    //Create the dateformatter object
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init] ;
+    
+    //Set the required date format
+    [formatter setDateFormat:@"yyyy-MM-dd HH:MM:SS"];
+    
+    //Get the string date
+    NSString* strDate = [formatter stringFromDate:_startTime];
+    
+    
+    NSLog(@"Created TimeEvent, with Name: %@, Start Time: %@", name, strDate);
+    
     return self;
 }
 
@@ -36,5 +49,15 @@
     return [self initWithEventName:name eventColor:color];
 }
 
+- (long)endTimeEvent
+{
+    _endTime = [[NSDate alloc] init];
+    
+    NSTimeInterval elapsedTime = [_endTime timeIntervalSinceDate:_startTime];
+    
+    NSLog(@"TimeEvent ended -- Elapsed Time: %ld", (long)elapsedTime);
+    
+    return (long)elapsedTime;
+}
 
 @end
