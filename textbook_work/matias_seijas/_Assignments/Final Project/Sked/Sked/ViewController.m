@@ -47,8 +47,10 @@
     
     _endTimeEvent.hidden = NO;
     
-    newTimeEvent = [[TimeEvent alloc] initWithEventName:@"TEST1"];
     
+    NSString *eventName = _timeEventName.text;
+    
+    newTimeEvent = [[TimeEvent alloc] initWithEventName:eventName];
     
 }
 
@@ -57,6 +59,7 @@
     NSLog(@"endTimeEvent clicked");
     
     _endTimeEvent.hidden = YES;
+    _timeEventName.text = @"";
     
     long totalTime = [newTimeEvent endTimeEvent];
     
