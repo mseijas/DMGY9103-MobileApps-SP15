@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,30 +13,66 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dbf-xz-FNY" id="o83-Hx-wpP">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blb-vu-9mg">
-                        <rect key="frame" x="54" y="3" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Blb-vu-9mg">
+                        <rect key="frame" x="56" y="4" width="136" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Bmd-OU-tEa"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-jr-Uzd">
-                        <rect key="frame" x="254" y="11" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TEM-iY-wiL">
-                        <rect key="frame" x="1" y="1" width="39" height="42"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZI7-xp-rMC">
-                        <rect key="frame" x="54" y="22" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZI7-xp-rMC">
+                        <rect key="frame" x="56" y="27" width="152" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="Ri8-1y-V1b"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEM-iY-wiL">
+                        <rect key="frame" x="7" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="aPs-J9-cxG"/>
+                            <constraint firstAttribute="width" constant="40" id="qEe-4x-qAb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-jr-Uzd">
+                        <rect key="frame" x="264" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ZI7-xp-rMC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Blb-vu-9mg" secondAttribute="bottom" constant="5" id="2Np-Wg-d8T"/>
+                    <constraint firstAttribute="centerY" secondItem="vtV-jr-Uzd" secondAttribute="centerY" id="8yg-hw-SaQ"/>
+                    <constraint firstItem="TEM-iY-wiL" firstAttribute="leading" secondItem="o83-Hx-wpP" secondAttribute="leadingMargin" constant="-1" id="CBH-9m-4Tm"/>
+                    <constraint firstAttribute="centerY" secondItem="TEM-iY-wiL" secondAttribute="centerY" id="F3L-WP-5uH"/>
+                    <constraint firstItem="TEM-iY-wiL" firstAttribute="top" secondItem="o83-Hx-wpP" secondAttribute="topMargin" constant="-6" id="YP5-Nh-I5Q"/>
+                    <constraint firstItem="Blb-vu-9mg" firstAttribute="top" secondItem="o83-Hx-wpP" secondAttribute="topMargin" constant="-4" id="a2N-ei-flC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="TEM-iY-wiL" secondAttribute="bottom" constant="-7" id="btq-IN-xGW"/>
+                    <constraint firstItem="vtV-jr-Uzd" firstAttribute="leading" secondItem="Blb-vu-9mg" secondAttribute="trailing" constant="72" id="fow-Yo-im6"/>
+                    <constraint firstItem="vtV-jr-Uzd" firstAttribute="leading" secondItem="ZI7-xp-rMC" secondAttribute="trailing" constant="56" id="hA4-w5-Zhh"/>
+                    <constraint firstItem="Blb-vu-9mg" firstAttribute="leading" secondItem="TEM-iY-wiL" secondAttribute="trailing" constant="9" id="hH9-uJ-o3y"/>
+                    <constraint firstItem="ZI7-xp-rMC" firstAttribute="leading" secondItem="TEM-iY-wiL" secondAttribute="trailing" constant="9" id="r27-Co-ttq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vtV-jr-Uzd" secondAttribute="trailing" constant="6" id="tBZ-k6-Zdn"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ZI7-xp-rMC" secondAttribute="bottom" constant="-5" id="uja-41-G9D"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="Blb-vu-9mg" id="w04-cu-A5g"/>
+                <outlet property="serialNumberLabel" destination="ZI7-xp-rMC" id="67b-DA-jit"/>
+                <outlet property="thumbnailView" destination="TEM-iY-wiL" id="cdo-KP-G1U"/>
+                <outlet property="valueLabel" destination="vtV-jr-Uzd" id="Q7R-ZP-hIx"/>
+            </connections>
             <point key="canvasLocation" x="526" y="339"/>
         </tableViewCell>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
