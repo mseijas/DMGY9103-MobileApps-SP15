@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 // ** Instance variables **
 @interface BNRItem : NSObject <NSCoding>
@@ -16,6 +17,7 @@
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, readonly, strong) NSDate *dateCreated;
 @property (nonatomic, copy) NSString *itemKey;
+@property (strong, nonatomic) UIImage *thumbnail;
 
 
 // ** Class Methods **
@@ -33,5 +35,7 @@
 - (instancetype)initWithItemName:(NSString *)name
                     serialNumber:(NSString *)sNumber;
 
+
+- (void)setThumbnailFromImage:(UIImage *)image;
 
 @end
