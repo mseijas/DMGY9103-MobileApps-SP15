@@ -13,6 +13,7 @@
 
 {
     TimeEvent *newTimeEvent;
+
 }
 
 - (IBAction)startTimeEvent:(id)sender;
@@ -34,6 +35,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _elapsedTime.text = @"";
+    
 }
 
 - (void)didReceiveMemoryWarning {
