@@ -13,6 +13,7 @@
 
 {
     TimeEvent *newTimeEvent;
+    NSTimer *countDown;
 
 }
 
@@ -54,6 +55,12 @@
     
     newTimeEvent = [[TimeEvent alloc] initWithEventName:eventName];
     
+    countDown = [NSTimer scheduledTimerWithTimeInterval:0.5
+                                                          target:self
+                                                        selector:@selector(updateView)
+                                                        userInfo:nil
+                                                         repeats:YES];
+    
 }
 
 - (IBAction)endTimeEvent:(id)sender {
@@ -63,11 +70,23 @@
     _endTimeEvent.hidden = YES;
     _timeEventName.text = @"";
     
+    [newTimeEvent endTimeEvent];
+    
+    _elapsedTime.text = @"";
+    
+    [countDown invalidate];
+    
+}
+
+- (void)updateView {
+    NSLog(@"Timer fired");
+    
     long totalTime = [newTimeEvent endTimeEvent];
     
     NSString *strTotalTime = [NSString stringWithFormat:@"%ld", totalTime];
     
     _elapsedTime.text = strTotalTime;
-    
+
 }
+
 @end

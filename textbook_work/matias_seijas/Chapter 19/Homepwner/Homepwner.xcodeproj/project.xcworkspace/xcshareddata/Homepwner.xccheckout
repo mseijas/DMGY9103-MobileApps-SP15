@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BBE154D6-916F-4C68-8972-9212A980D24D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Homepwner</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>17B896449DBD7FEF966C16F8C168EDB445C4FA07</key>
 		<string>https://github.com/mseijas/DMGY9103-MobileApps-SP15</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>textbook_work/matias_seijas/Chapter 19/Homepwner/Homepwner.xcodeproj</string>
+	<string>textbook_work/matias_seijas/Chapter 19/Homepwner/Homepwner.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>17B896449DBD7FEF966C16F8C168EDB445C4FA07</key>
