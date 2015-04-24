@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601C4E841AE9C2400026E801 /* TimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C4E831AE9C2400026E801 /* TimeUtils.m */; };
 		60DFDEBD1AD0F12C00A4CF6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDEBC1AD0F12C00A4CF6D /* main.m */; };
 		60DFDEC01AD0F12C00A4CF6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDEBF1AD0F12C00A4CF6D /* AppDelegate.m */; };
 		60DFDEC31AD0F12C00A4CF6D /* Sked.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDEC11AD0F12C00A4CF6D /* Sked.xcdatamodeld */; };
@@ -29,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		601C4E821AE9C2400026E801 /* TimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtils.h; sourceTree = "<group>"; };
+		601C4E831AE9C2400026E801 /* TimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtils.m; sourceTree = "<group>"; };
 		60DFDEB71AD0F12C00A4CF6D /* Sked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFDEBB1AD0F12C00A4CF6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DFDEBC1AD0F12C00A4CF6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				60FB58601AD19B5D008BC8B1 /* TimeEvent.h */,
 				60FB58611AD19B5D008BC8B1 /* TimeEvent.m */,
 				60DFDEC51AD0F12C00A4CF6D /* ViewController.m */,
+				601C4E821AE9C2400026E801 /* TimeUtils.h */,
+				601C4E831AE9C2400026E801 /* TimeUtils.m */,
 				60DFDEC71AD0F12C00A4CF6D /* Main.storyboard */,
 				60DFDECA1AD0F12C00A4CF6D /* Images.xcassets */,
 				60DFDECC1AD0F12C00A4CF6D /* LaunchScreen.xib */,
@@ -232,6 +237,7 @@
 				60FB58621AD19B5D008BC8B1 /* TimeEvent.m in Sources */,
 				60DFDEBD1AD0F12C00A4CF6D /* main.m in Sources */,
 				60DFDEC61AD0F12C00A4CF6D /* ViewController.m in Sources */,
+				601C4E841AE9C2400026E801 /* TimeUtils.m in Sources */,
 				60DFDEC31AD0F12C00A4CF6D /* Sked.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

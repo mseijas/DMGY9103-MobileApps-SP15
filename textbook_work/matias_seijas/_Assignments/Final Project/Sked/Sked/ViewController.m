@@ -8,12 +8,15 @@
 
 #import "ViewController.h"
 #import "TimeEvent.h"
+#import "TimeUtils.h"
 
 @interface ViewController ()
 
 {
     TimeEvent *newTimeEvent;
     NSTimer *countDown;
+    NSDateFormatter *dateFormatter;
+   // TimeUtils *timeUtils;
 
 }
 
@@ -30,6 +33,11 @@
 
 
 @implementation ViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:MM:SS"];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,7 +63,7 @@
     
     newTimeEvent = [[TimeEvent alloc] initWithEventName:eventName];
     
-    countDown = [NSTimer scheduledTimerWithTimeInterval:0.5
+    countDown = [NSTimer scheduledTimerWithTimeInterval:0.1
                                                           target:self
                                                         selector:@selector(updateView)
                                                         userInfo:nil
@@ -81,11 +89,37 @@
 - (void)updateView {
     NSLog(@"Timer fired");
     
+    //NSDate *tempDate = [[NSDate alloc] init];
+    
     long totalTime = [newTimeEvent endTimeEvent];
     
-    NSString *strTotalTime = [NSString stringWithFormat:@"%ld", totalTime];
+    NSDate *date1 = newTimeEvent.startTime;
+    NSDate *date2 = newTimeEvent.endTime;
     
-    _elapsedTime.text = strTotalTime;
+    
+    
+//    NSString *strTotalTime = [NSString stringWithFormat:@"%ld", totalTime];
+//    
+//    _elapsedTime.text = strTotalTime;
+    
+    
+//    // Get the system calendar
+//    NSCalendar *sysCalendar = [NSCalendar currentCalendar];
+//    
+//    // Create the NSDates
+//    
+//    
+//    // Get conversion to months, days, hours, minutes
+//    unsigned int unitFlags = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitNanosecond;
+//    
+//    NSDateComponents *conversionInfo = [sysCalendar components:unitFlags fromDate:date1  toDate:date2  options:0];
+//    
+//    NSString *msTime = [NSString stringWithFormat:@"%ldsec %ldmin %ldhours %lddays %ldmoths",(long)[conversionInfo second], (long)[conversionInfo minute], (long)[conversionInfo hour], (long)[conversionInfo day], (long)[conversionInfo month]];
+    
+    _elapsedTime.text = [TimeUtils timeDifferenceWithStart:date1 End:date2];
+    
+//    NSLog(@"Conversion: %ldsec %ldmin %ldhours %lddays %ldmoths",(long)[conversionInfo second], (long)[conversionInfo minute], (long)[conversionInfo hour], (long)[conversionInfo day], (long)[conversionInfo month]);
+    
 
 }
 

@@ -15,7 +15,7 @@
                        eventColor:(UIColor *)color;
 {
     self = [super init];
-    
+
     if (self) {
         _eventName = name;
         _eventColor = color;
