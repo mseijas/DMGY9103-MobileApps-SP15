@@ -47,6 +47,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Event:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghL-ft-JWd">
+                                <rect key="frame" x="25" y="47" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsL-wg-mS8">
+                                <rect key="frame" x="129" y="47" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -54,6 +66,7 @@
                     <connections>
                         <outlet property="elapsedTime" destination="9JR-NG-06J" id="bZY-xx-iyL"/>
                         <outlet property="endTimeEvent" destination="n2e-ci-zLa" id="fwe-GU-YsH"/>
+                        <outlet property="lastEvent" destination="qsL-wg-mS8" id="RrC-X4-jRq"/>
                         <outlet property="startTimeEvent" destination="lfG-xA-T8O" id="17s-GT-f7L"/>
                         <outlet property="timeEventName" destination="mHM-Qn-aQx" id="TS6-qy-6ug"/>
                     </connections>

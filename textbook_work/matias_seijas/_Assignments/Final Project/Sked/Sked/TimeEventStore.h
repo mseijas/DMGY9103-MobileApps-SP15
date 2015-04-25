@@ -13,7 +13,7 @@
 
 @interface TimeEventStore : NSObject
 
-@property (nonatomic, readonly, copy) NSArray *allItems;
+@property (nonatomic, readonly, copy) NSArray *allTimeEvents;
 
 
 + (instancetype)sharedStore;

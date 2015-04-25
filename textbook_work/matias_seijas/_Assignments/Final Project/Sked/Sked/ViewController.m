@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TimeEvent.h"
+#import "TimeEventStore.h"
 #import "TimeUtils.h"
 
 @interface ViewController ()
@@ -28,6 +29,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *timeEventName;
 
 @property (weak, nonatomic) IBOutlet UILabel *elapsedTime;
+@property (weak, nonatomic) IBOutlet UILabel *lastEvent;
+
 
 @end
 
@@ -35,7 +38,10 @@
 @implementation ViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-
+    /*TimeEventStore *timeEventStore = [TimeEventStore sharedStore];
+    NSInteger numberEvents = [timeEventStore.allItems count];
+    NSLog(@"EVENTS IN STORE: %ld", (long)numberEvents);*/
+    NSLog(@"VIEW WILL APPEAR !!!");
 }
 
 - (void)viewDidLoad {
@@ -43,6 +49,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _elapsedTime.text = @"";
+    
+    NSLog(@"** VIEW DID LOAD ***");
+    
     
 }
 
@@ -60,7 +69,8 @@
     
     NSString *eventName = _timeEventName.text;
     
-    newTimeEvent = [[TimeEvent alloc] initWithEventName:eventName];
+    //newTimeEvent = [[TimeEvent alloc] initWithEventName:eventName];
+    newTimeEvent = [[TimeEventStore sharedStore] createWithEventName:eventName];
     
     countDown = [NSTimer scheduledTimerWithTimeInterval:0.1
                                                           target:self
