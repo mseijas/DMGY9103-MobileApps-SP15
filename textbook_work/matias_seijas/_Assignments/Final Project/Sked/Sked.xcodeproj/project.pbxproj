@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		601C4E841AE9C2400026E801 /* TimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C4E831AE9C2400026E801 /* TimeUtils.m */; };
+		601C4E901AEC43750026E801 /* TimeEventStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C4E8F1AEC43750026E801 /* TimeEventStore.m */; };
 		60DFDEBD1AD0F12C00A4CF6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDEBC1AD0F12C00A4CF6D /* main.m */; };
 		60DFDEC01AD0F12C00A4CF6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDEBF1AD0F12C00A4CF6D /* AppDelegate.m */; };
 		60DFDEC31AD0F12C00A4CF6D /* Sked.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60DFDEC11AD0F12C00A4CF6D /* Sked.xcdatamodeld */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		601C4E821AE9C2400026E801 /* TimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtils.h; sourceTree = "<group>"; };
 		601C4E831AE9C2400026E801 /* TimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtils.m; sourceTree = "<group>"; };
+		601C4E8E1AEC43750026E801 /* TimeEventStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeEventStore.h; sourceTree = "<group>"; };
+		601C4E8F1AEC43750026E801 /* TimeEventStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeEventStore.m; sourceTree = "<group>"; };
 		60DFDEB71AD0F12C00A4CF6D /* Sked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DFDEBB1AD0F12C00A4CF6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DFDEBC1AD0F12C00A4CF6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 		60DFDEB91AD0F12C00A4CF6D /* Sked */ = {
 			isa = PBXGroup;
 			children = (
+				601C4E8E1AEC43750026E801 /* TimeEventStore.h */,
+				601C4E8F1AEC43750026E801 /* TimeEventStore.m */,
 				60DFDEBE1AD0F12C00A4CF6D /* AppDelegate.h */,
 				60DFDEBF1AD0F12C00A4CF6D /* AppDelegate.m */,
 				60DFDEC41AD0F12C00A4CF6D /* ViewController.h */,
@@ -237,6 +242,7 @@
 				60FB58621AD19B5D008BC8B1 /* TimeEvent.m in Sources */,
 				60DFDEBD1AD0F12C00A4CF6D /* main.m in Sources */,
 				60DFDEC61AD0F12C00A4CF6D /* ViewController.m in Sources */,
+				601C4E901AEC43750026E801 /* TimeEventStore.m in Sources */,
 				601C4E841AE9C2400026E801 /* TimeUtils.m in Sources */,
 				60DFDEC31AD0F12C00A4CF6D /* Sked.xcdatamodeld in Sources */,
 			);

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface TimeEvent : NSObject
+@interface TimeEvent : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSString *eventName;
 @property (nonatomic, copy) NSDate *startTime;
@@ -22,6 +22,6 @@
 
 - (instancetype)initWithEventName:(NSString *)name;
 
-- (long)endTimeEvent;
+- (void)endTimeEvent;
 
 @end

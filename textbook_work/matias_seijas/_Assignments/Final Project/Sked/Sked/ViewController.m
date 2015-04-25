@@ -35,8 +35,7 @@
 @implementation ViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:MM:SS"];
+
 }
 
 - (void)viewDidLoad {
@@ -73,53 +72,21 @@
 
 - (IBAction)endTimeEvent:(id)sender {
     
-    NSLog(@"endTimeEvent clicked");
-    
     _endTimeEvent.hidden = YES;
     _timeEventName.text = @"";
-    
-    [newTimeEvent endTimeEvent];
-    
     _elapsedTime.text = @"";
     
+    [newTimeEvent endTimeEvent];
     [countDown invalidate];
     
 }
 
 - (void)updateView {
-    NSLog(@"Timer fired");
     
-    //NSDate *tempDate = [[NSDate alloc] init];
+    NSDate *timerStart = newTimeEvent.startTime;
+    NSDate *timerNow = [[NSDate alloc] init];
     
-    long totalTime = [newTimeEvent endTimeEvent];
-    
-    NSDate *date1 = newTimeEvent.startTime;
-    NSDate *date2 = newTimeEvent.endTime;
-    
-    
-    
-//    NSString *strTotalTime = [NSString stringWithFormat:@"%ld", totalTime];
-//    
-//    _elapsedTime.text = strTotalTime;
-    
-    
-//    // Get the system calendar
-//    NSCalendar *sysCalendar = [NSCalendar currentCalendar];
-//    
-//    // Create the NSDates
-//    
-//    
-//    // Get conversion to months, days, hours, minutes
-//    unsigned int unitFlags = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond | NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitNanosecond;
-//    
-//    NSDateComponents *conversionInfo = [sysCalendar components:unitFlags fromDate:date1  toDate:date2  options:0];
-//    
-//    NSString *msTime = [NSString stringWithFormat:@"%ldsec %ldmin %ldhours %lddays %ldmoths",(long)[conversionInfo second], (long)[conversionInfo minute], (long)[conversionInfo hour], (long)[conversionInfo day], (long)[conversionInfo month]];
-    
-    _elapsedTime.text = [TimeUtils timeDifferenceWithStart:date1 End:date2];
-    
-//    NSLog(@"Conversion: %ldsec %ldmin %ldhours %lddays %ldmoths",(long)[conversionInfo second], (long)[conversionInfo minute], (long)[conversionInfo hour], (long)[conversionInfo day], (long)[conversionInfo month]);
-    
+    _elapsedTime.text = [TimeUtils timeDifferenceWithStart:timerStart End:timerNow];
 
 }
 

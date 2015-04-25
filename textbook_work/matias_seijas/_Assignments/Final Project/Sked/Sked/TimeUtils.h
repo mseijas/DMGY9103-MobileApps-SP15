@@ -13,4 +13,6 @@
 + (NSString *)timeDifferenceWithStart:(NSDate *)startDate
                                   End:(NSDate *)endDate;
 
++ (NSString *)formatFullDate:(NSDate *)date;
+
 @end

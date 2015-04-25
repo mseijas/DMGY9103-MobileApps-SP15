@@ -7,10 +7,12 @@
 //
 
 #import "TimeEvent.h"
+#import "TimeUtils.h"
 
 @implementation TimeEvent
 
-// Designated initializer
+
+/***  Initializers   ***/
 - (instancetype)initWithEventName:(NSString *)name
                        eventColor:(UIColor *)color;
 {
@@ -24,19 +26,10 @@
     }
     
     
-    //Create the dateformatter object
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init] ;
-    
-    //Set the required date format
-    [formatter setDateFormat:@"yyyy-MM-dd HH:MM:SS"];
-    
-    //Get the string date
-    NSString* strDate = [formatter stringFromDate:_startTime];
-    
-    
-    NSLog(@"Created TimeEvent, with Name: %@, Start Time: %@", name, strDate);
+    NSLog(@"Created TimeEvent, with Name: %@, Start Time: %@", name, [TimeUtils formatFullDate:_startTime]);
     
     return self;
+    
 }
 
 - (instancetype)initWithEventName:(NSString *)name
@@ -49,15 +42,38 @@
     return [self initWithEventName:name eventColor:color];
 }
 
-- (long)endTimeEvent
+
+/*** Class Methods ***/
+- (void)endTimeEvent
 {
     _endTime = [[NSDate alloc] init];
     
-    NSTimeInterval elapsedTime = [_endTime timeIntervalSinceDate:_startTime];
+    NSLog(@"TimeEvent ended. Recorded Time: %@", [TimeUtils timeDifferenceWithStart:_startTime End:_endTime]);
     
-    NSLog(@"TimeEvent ended -- Elapsed Time: %ld", (long)elapsedTime);
+}
+
+
+/*** Persistent Data ***/
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.eventName forKey:@"eventName"];
+    [aCoder encodeObject:self.startTime forKey:@"startTime"];
+    [aCoder encodeObject:self.endTime forKey:@"endTime"];
+    [aCoder encodeObject:self.eventColor forKey:@"eventColor"];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
     
-    return (long)elapsedTime;
+    if (self) {
+        _eventName = [aDecoder decodeObjectForKey:@"eventName"];
+        _startTime = [aDecoder decodeObjectForKey:@"startTime"];
+        _endTime = [aDecoder decodeObjectForKey:@"endTime"];
+        _eventColor = [aDecoder decodeObjectForKey:@"eventColor"];
+    }
+    
+    return self;
 }
 
 @end
